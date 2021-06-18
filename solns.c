@@ -1,37 +1,43 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
-int max(int a[],int n){
-  int maxi=0;
-  for(int i=0;i<n;++i){
-    if(a[i]>maxi){
-      maxi=a[i];
-    }
-    else{
-      continue;
-    }
-  }
-  return maxi;
+/*max function*/
+int max(int a[],int n)
+{
+	int max=0;
+	for (int i=0;i<n;i++)
+	{
+		if (a[i]>max)
+			max=a[i];
+		else
+			continue;
+	}
+	return max;
 }
-int min(int a[];int n){
-   int mini=a[0];
-  for(int i=1;i<n;++i){
-     if(a[i]<mini){
-       mini=a[i];
-     }
-     else{
-      continue;
-     }
-  }
-  return mini;
+/*min function*/
+int min(int a[],int n)
+{
+	int min=a[0];
+	for(int i=0;i<n;i++)
+	{
+		if(a[i]<min)
+			min=a[i];
+		else
+			continue;
+	}
+	return min;
 }
-float average(int a[],int n){
-    int sum=0,ans=0;
-   for(int i=0;i<n;++i){
-      sum+=a[i];
-   }
-  ans=sum/n;
-  return ans;
+float average(int a[],int n)
+{
+	int sum=0;
+	float avg=0;
+	for(int i=0;i<n;i++)
+	{
+		sum+=a[i];
+	}
+	avg=sum/n;
+	return avg;
 }
+/*mode function*/
 int mode(int a[],int n)
 {
 	int lmax=max(a,n);
@@ -59,7 +65,7 @@ int mode(int a[],int n)
 	}
 	return flag;
 }
- int isprime(int i)
+    int isprime(int i)
     {
 	int flag=0;
 			for(int j=2;j<i;j++)
